@@ -1,0 +1,12 @@
+#canvas {
+  border: 1px solid black;
+  float: left;
+  margin: 10px;
+}
+
+.box {
+  border: 1px solid black;
+  float: left;
+  padding: 5px;
+  margin: 10px;
+}

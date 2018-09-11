@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <title>Graph visualizer</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="init.js"></script>
+  <script src="cell.js"></script>
+  <script src="board.js"></script>
+
+  <script src="gen-maze.js"></script>
+
+  <script src="traverse.js"></script>
+  <script src="priority-queue-traverse.js"></script>
+</head>
+
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div id="info" class="box">
+    Row: <span id="info-row"></span> <br>
+    Col: <span id="info-col"></span> <br>
+    Status: <span id="info-status"></span> <br>
+    Dist from start: <span id="info-dist-from-start"></span>
+  </div>
+
+  <div id="buttons" class="box">
+    <button id="btn-reset-board">Reset board</button> <br>
+    <button id="btn-gen-maze">Generate maze</button> <br>
+    <!-- <button id="btn-gen-maze">Generate maze with more ways</button> <br> -->
+
+    <br>
+    <button id="btn-dfs">DFS</button> <br>
+    <button id="btn-bfs">BFS</button> <br>
+    <button id="btn-dijkstra">Dijkstra</button> <br>
+    <button id="btn-a-star">A*</button> <br>
+
+    <br>
+    <button id="btn-stop-traversing">Stop traversing</button> <br>
+  </div>
+
+  <div id="config" class="box">
+    Rows: <input id="input-rows" type="number" min="1" max="100"> <br>
+    Cols: <input id="input-cols" type="number" min="1" max="100"> <br>
+
+    <br>
+    Start row: <input id="input-start-row" type="number" min="0" max="99"> <br>
+    Start col: <input id="input-start-col" type="number" min="0" max="99"> <br>
+
+    <br>
+    End row: <input id="input-end-row" type="number" min="1" max="99"> <br>
+    End col: <input id="input-end-col" type="number" min="1" max="99"> <br>
+
+    <br>
+    Step wait (ms): <input id="input-step-wait" type="number" min="1" max="1000"> <br>
+
+    <br>
+    <button id="btn-apply-config">Apply config</button>
+  </div>
+
+</body>
+
+</html>
